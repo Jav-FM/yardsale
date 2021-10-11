@@ -4,7 +4,8 @@ import "../styles/global.css";
 import Layout from "../containers/Layout";
 import Login from "../pages/Login";
 import CreatePassword from "../pages/CreatePassword";
-import RecoveryPassword from "../pages/RecoveryPassword";
+import PasswordRecovery from "../pages/PasswordRecovery";
+import SendEmail from "../pages/SendEmail";
 import CreateAccount from "../pages/CreateAccount";
 import AccountInfo from "../pages/AccountInfo";
 import Home from '../pages/Home';
@@ -20,7 +21,8 @@ const App = () => {
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/create-password" component={CreatePassword} />
-            <Route exact path="/recovery-password" component={RecoveryPassword}/>
+            <Route exact path="/password-recovery" component={PasswordRecovery} />
+            <Route exact path="/send-email" component={SendEmail}/>
             <Route exact path="/create-account" component={CreateAccount}/>
             <Route exact path="/account-info" component={AccountInfo}/>
             <Route exact path="/checkout" component={Checkout}/>
