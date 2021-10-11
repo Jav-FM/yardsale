@@ -9,7 +9,7 @@ nav {
 .menu {
   display: none;
 }
-.logo {
+.nav-logo {
   width: 100px;
 }
 .navbar-left ul,
@@ -44,6 +44,9 @@ nav {
   color: var(--very-light-pink);
   font-size: var(--sm);
   margin-right: 12px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .navbar-shopping-cart {
   position: relative;

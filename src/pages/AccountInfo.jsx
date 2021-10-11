@@ -3,7 +3,7 @@ import '../styles/AccountInfo.scss'
 
 const AccountInfo = () => {
   return (
-    <div className="login">
+    <div className="AccountInfo">
       <div className="form-container">
         <h1 className="title">My account</h1>
 
@@ -28,7 +28,7 @@ const AccountInfo = () => {
           <input
             type="submit"
             value="Edit"
-            className="secondary-button login-button"
+            className="secondary-button AccountInfo-button"
           ></input>
         </form>
       </div>

@@ -12,7 +12,12 @@ module.exports = {
     },
     mode: 'development',
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx'],
+        //Construccion de alias para no tener necesidad de poner rutas en codigo:
+        alias: {
+            '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+            '@logos': path.resolve(__dirname, 'src/assets/logos/')
+        }
     },
     module: {
         rules: [
@@ -39,6 +44,11 @@ module.exports = {
                     "css-loader",
                     "sass-loader"
                 ]
+            },
+            //Para que reconozca archivos de imagenes:
+            {
+                test: /\.(png|svg|jpg|git)$/,
+                type: 'asset'
             }
         ]
     },

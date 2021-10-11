@@ -3,7 +3,7 @@ import '../styles/CreateAccount.scss';
 
 const CreateAccount = () => {
   return (
-    <div className="login">
+    <div className="CreateAccount">
       <div className="form-container">
         <h1 className="title">My account</h1>
 
@@ -43,7 +43,7 @@ const CreateAccount = () => {
           <input
             type="submit"
             value="Create"
-            className="primary-button login-button"
+            className="primary-button CreateAccount-button"
           ></input>
         </form>
       </div>
