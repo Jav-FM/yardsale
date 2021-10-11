@@ -1,9 +1,9 @@
 @import "vars";
 
-.product-card {
+.ProductItem {
   width: 240px;
 }
-.product-card img {
+.ProductItem img {
   width: 240px;
   height: 240px;
   border-radius: 20px;
@@ -35,10 +35,10 @@
   color: var(--very-light-pink);
 }
 @media (max-width: 640px) {
-  .product-card {
+  .ProductItem {
     width: 140px;
   }
-  .product-card img {
+  .ProductItem img {
     width: 140px;
     height: 140px;
   }
