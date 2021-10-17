@@ -1,22 +1,33 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../styles/Login.scss';
 
 import logoYardSale from '@logos/logo_yard_sale.svg'
 
 const Login = () => {
+  const form = useRef(null);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(form.current);
+    const data = {
+      username: formData.get('email'),
+      password: formData.get('password')
+    }
+    console.log(data)
+  }
+
     return (
         <div className="login">
         <div className="form-container">
           <img src={logoYardSale} alt="logo" className="logo-login"></img>
     
-          <form action="/" className="form">
-            <label for="email" className="label">Email address</label>
-            <input type="text" id="email" placeholder="platzi@example.cm" className="input input-email"></input>
+          <form action="/" className="form" ref={form}>
+            <label className="label">Email address</label>
+            <input type="text" name="email" placeholder="platzi@example.cm" className="input input-email"></input>
     
-            <label for="password" className="label">Password</label>
-            <input type="password" id="password" placeholder="*********" className="input input-password"></input>
+            <label className="label">Password</label>
+            <input type="password" name="password" placeholder="*********" className="input input-password"></input>
     
-            <input type="submit" value="Log in" className="primary-button login-button"></input>
+            <button className="primary-button login-button" onClick={handleSubmit}>Log in</button>
             <a href="/">Forgot my password</a>
           </form>
     
