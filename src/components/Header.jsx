@@ -2,9 +2,9 @@ import React, { useState, useContext } from "react";
 import Menu from '../components/Menu';
 import MyOrder from '../containers/MyOrder';
 import '../styles/Header.scss';
-import menuSvg from '@icons/icon_menu.svg';
-import logoSvg from '@logos/logo_yard_sale.svg'; 
-import shoppingCartSvg from '@icons/icon_shopping_cart.svg';
+import menuSvg from '../assets/icons/icon_menu.svg';
+import logoSvg from '../assets/logos/logo_yard_sale.svg'; 
+import shoppingCartSvg from '../assets/icons/icon_shopping_cart.svg';
 import AppContext from '../context/AppContext';
 
 const Header = () => {
