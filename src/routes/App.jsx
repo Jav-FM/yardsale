@@ -12,25 +12,31 @@ import Home from '../pages/Home';
 import NotFound from "../pages/NotFound";
 import Checkout from "../pages/Checkout";
 import Orders from "../pages/Orders";
+import AppContext from "../context/AppContext";
+import useInitialState from "../hooks/useInitialState";
+
 
 const App = () => {
+  const initialState = useInitialState();
   return (
-    <BrowserRouter>
-      <Layout>
-        <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/create-password" component={CreatePassword} />
-            <Route exact path="/password-recovery" component={PasswordRecovery} />
-            <Route exact path="/send-email" component={SendEmail}/>
-            <Route exact path="/create-account" component={CreateAccount}/>
-            <Route exact path="/account-info" component={AccountInfo}/>
-            <Route exact path="/checkout" component={Checkout}/>
-            <Route exact path="/orders" component={Orders}/>
-            <Route path="*" component={NotFound}/>
-        </Switch>
-      </Layout>
-    </BrowserRouter>
+    <AppContext.Provider value={initialState}>
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/create-password" component={CreatePassword} />
+              <Route exact path="/password-recovery" component={PasswordRecovery} />
+              <Route exact path="/send-email" component={SendEmail}/>
+              <Route exact path="/create-account" component={CreateAccount}/>
+              <Route exact path="/account-info" component={AccountInfo}/>
+              <Route exact path="/checkout" component={Checkout}/>
+              <Route exact path="/orders" component={Orders}/>
+              <Route path="*" component={NotFound}/>
+          </Switch>
+        </Layout>
+      </BrowserRouter>
+    </AppContext.Provider>
   );
 };
 
